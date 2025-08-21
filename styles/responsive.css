@@ -1,0 +1,147 @@
+/* ====================================
+   RESPONSIVE STYLES
+   ====================================
+   This file handles responsive behavior
+   Works with the main.css file
+*/
+
+/* Tablet and smaller desktop (901px down to 451px) */
+@media (max-width: 900px) {
+  /* Navbar adjustments */
+  .site-title {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    box-shadow: var(--box-shadow);
+    gap: var(--spacing-md);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Form adjustments */
+  .form-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-width: 100%;
+  }
+  
+  .form-container {
+    padding: var(--spacing-lg);
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: 1rem;
+    padding: var(--spacing-md);
+  }
+}
+
+/* Mobile phones (450px and below) */
+@media (max-width: 450px) {
+  /* Body adjustments for taller mobile navbar */
+  body {
+    padding-top: 90px; /* Increased for mobile navbar height */
+  }
+  
+  /* Mobile navbar structure */
+  .navbar {
+    height: auto;
+    padding: var(--spacing-sm);
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .navbar-row {
+    display: flex; /* FIXED: Don't hide this, we need it */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* Hide desktop title, show mobile title */
+  .site-title {
+    display: none;
+  }
+  
+  .site-title-mobile {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--dark-blue-1);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Smaller logo on mobile */
+  .logo {
+    width: 32px;
+  }
+  
+  /* Adjust nav-links position for taller mobile navbar */
+  .nav-links {
+    top: 90px; /* Match the new body padding-top */
+  }
+  
+  /* Mobile form adjustments */
+  .form-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+    max-width: 100%;
+  }
+  
+  .form-container {
+    padding: var(--spacing-md);
+    margin: 0;
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: 0.95rem;
+    padding: var(--spacing-sm);
+  }
+  
+  /* Mobile footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+  
+  .footer-left,
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+/* Very small screens (320px and below) */
+@media (max-width: 320px) {
+  .form-container {
+    padding: var(--spacing-sm);
+  }
+  
+  .site-title-mobile {
+    font-size: 0.7rem;
+  }
+  
+  .navbar {
+    padding: var(--spacing-xs);
+  }
+}
