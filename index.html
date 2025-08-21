@@ -36,7 +36,7 @@
 			<div class="hero-content">
 				<h2 class="hero-title">Mastering the DOM</h2>
 				<p class="hero-description">
-					A Project to show how the Document Object Model works with React.js and other Frameworks.
+					Just another fun thing to do because I like coding.
 				</p>
 				<button class="cta-button" id="start-exploring">Start Exploring DOM</button>
 			</div>
@@ -152,15 +152,15 @@
 					</div>
 
 					<fieldset class="form-fieldset">
-						<legend class="form-legend">Interests</legend>
+						<legend class="form-legend">Do you have the same interests as me?</legend>
 						<div class="checkbox-group">
 							<div class="checkbox-item">
-								<input type="checkbox" id="interest-tech" name="interests" value="technology" class="form-checkbox">
-								<label for="interest-tech" class="checkbox-label">Technology</label>
+								<input type="checkbox" id="interest-cats" name="interests" value="cats" class="form-checkbox">
+								<label for="interest-cats" class="checkbox-label">Cats</label>
 							</div>
 							<div class="checkbox-item">
-								<input type="checkbox" id="interest-sports" name="interests" value="sports" class="form-checkbox">
-								<label for="interest-sports" class="checkbox-label">Sports</label>
+								<input type="checkbox" id="interest-muay-thai" name="interests" value="muay-thai" class="form-checkbox">
+								<label for="interest-muay-thai" class="checkbox-label">Muay Thai</label>
 							</div>
 							<div class="checkbox-item">
 								<input type="checkbox" id="interest-music" name="interests" value="music" class="form-checkbox">
@@ -168,7 +168,7 @@
 							</div>
 							<div class="checkbox-item">
 								<input type="checkbox" id="interest-travel" name="interests" value="travel" class="form-checkbox">
-								<label for="interest-travel" class="checkbox-label">Travel</label>
+								<label for="interest-travel" class="checkbox-label">Argentina</label>
 							</div>
 						</div>
 					</fieldset>
@@ -188,79 +188,6 @@
 
 				<!-- Form status messages -->
 				<div class="form-messages" id="form-messages" aria-live="polite"></div>
-			</div>
-		</section>
-
-		<!-- Saved Data Section -->
-		<section class="data-section" id="data-section">
-			<div class="section-header">
-				<h2 class="section-title">Saved Information</h2>
-				<p class="section-description">
-					View and manage your saved form submissions
-				</p>
-			</div>
-			
-			<div class="data-controls">
-				<div class="search-container">
-					<input 
-						type="text" 
-						id="search-entries" 
-						class="search-input" 
-						placeholder="Search saved entries..."
-						aria-label="Search saved entries"
-					>
-					<button class="search-button" id="search-button" aria-label="Search">🔍</button>
-				</div>
-				
-				<div class="filter-container">
-					<select id="filter-country" class="filter-select" aria-label="Filter by country">
-						<option value="">All Countries</option>
-						<option value="us">United States</option>
-						<option value="ca">Canada</option>
-						<option value="uk">United Kingdom</option>
-					</select>
-				</div>
-				
-				<button class="btn btn-danger" id="clear-all-data">Clear All Data</button>
-			</div>
-
-			<div class="entries-container">
-				<div class="entries-list" id="entries-list">
-					<!-- Dynamically populated entries will go here -->
-					<div class="empty-state" id="empty-state">
-						<p>No saved entries yet. Fill out the form above to get started!</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- DOM Inspector Section -->
-		<section class="dom-inspector-section" id="dom-inspector">
-			<div class="section-header">
-				<h2 class="section-title">DOM Tree Inspector</h2>
-				<p class="section-description">
-					Explore the DOM structure of this page and understand how elements relate to each other
-				</p>
-			</div>
-			
-			<div class="inspector-controls">
-				<button class="btn btn-primary" id="inspect-page">Inspect Entire Page</button>
-				<button class="btn btn-secondary" id="inspect-form">Inspect Form Only</button>
-				<button class="btn btn-secondary" id="inspect-nav">Inspect Navigation</button>
-				<button class="btn btn-info" id="highlight-mode">Toggle Element Highlight</button>
-			</div>
-
-			<div class="inspector-output">
-				<div class="dom-tree" id="dom-tree-output">
-					<p>Click "Inspect Entire Page" to see the DOM tree structure</p>
-				</div>
-				
-				<div class="element-details" id="element-details">
-					<h3>Element Details</h3>
-					<div class="details-content" id="details-content">
-						<p>Click on any element in the DOM tree to see its details</p>
-					</div>
-				</div>
 			</div>
 		</section>
 	</main>
@@ -283,5 +210,6 @@
 	<script src="scripts/dom-explorer.js"></script>
 	<script src="scripts/form-handler.js"></script>
 	<script src="scripts/main.js"></script>
+    <script src="scripts/navbar.js"></script>
 </body>
 </html>
