@@ -6,7 +6,7 @@
   --med-blue-2: #90e0ef;
   --light-blue: #caf0f8;
   --black: #111111;
-  --error-red: #ef233c; /* FIXED: Added missing dash */
+  --error-red: #ef233c;
   --valid-green: #57cc99;
 
   /* Additional variables */
@@ -16,7 +16,8 @@
   --gray-dark: #343a40;
 
   /* Typography */
-  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
 
   /* Spacing scale */
   --spacing-xs: 0.25rem;
@@ -32,16 +33,15 @@
   --transition: all 0.2s ease-in-out;
 }
 
-/* FIXED FORM VALIDATION STYLES */
 .form-input:invalid,
 .form-textarea:invalid,
 .form-select:invalid {
-  border-color: var(--error-red); /* FIXED: Added missing dash */
+  border-color: var(--error-red); 
   outline: none;
 }
 
 .error-container {
-  color: var(--error-red); /* FIXED: Added missing dash */
+  color: var(--error-red); 
   font-size: 0.875rem;
   margin-top: var(--spacing-xs);
   min-height: 1em;
@@ -59,15 +59,19 @@ body {
   line-height: 1.6;
   color: var(--black);
   background-color: var(--white);
-  padding-top: 64px; /* Space for fixed navbar */
+  padding-top: 64px;
 }
 
-/* ====================================
-   FIXED NAVBAR STYLES
-   ====================================
-*/
+
 
 .navbar {
+  display: flex;
+  height: auto;
+  padding: var(--spacing-sm);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -100,21 +104,11 @@ body {
 }
 
 .site-title {
-  font-size: calc(1.5rem + 0.5vw);
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark-blue-1);
   letter-spacing: 0.02em;
   margin: 0;
-}
-
-.site-title-mobile {
-  display: none;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--dark-blue-1);
-  margin: 0;
-  text-align: center;
-  width: 100%;
 }
 
 /* Navigation Links */
@@ -165,39 +159,6 @@ body {
   background-color: var(--dark-blue-1);
   transform: translateY(-1px);
   box-shadow: var(--box-shadow);
-}
-
-/* ====================================
-   FIXED RESPONSIVE STYLES
-   ====================================
-*/
-
-/* Tablet and smaller desktop */
-@media (max-width: 900px) {
-  .site-title {
-    font-size: 1.2rem;
-  }
-  
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    flex-direction: column;
-    padding: var(--spacing-lg);
-    box-shadow: var(--box-shadow);
-    gap: var(--spacing-md);
-  }
-  
-  .nav-links.active {
-    display: flex;
-  }
-  
-  .nav-toggle {
-    display: block;
-  }
 }
 
 /* Main content styles */
@@ -294,7 +255,7 @@ body {
   border-radius: var(--border-radius);
   text-align: center;
   font-weight: 600;
-  display: none; /* Hidden by default, shown via JavaScript */
+  display: none;
 }
 
 .form-messages.success {
@@ -310,7 +271,6 @@ body {
 }
 
 /* Footer styles */
-
 .footer {
   background-color: var(--dark-blue-1);
   color: var(--white);

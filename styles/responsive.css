@@ -1,15 +1,18 @@
-/* ====================================
-   RESPONSIVE STYLES
-   ====================================
-   This file handles responsive behavior
-   Works with the main.css file
-*/
-
-/* Tablet and smaller desktop (901px down to 451px) */
-@media (max-width: 900px) {
-  /* Navbar adjustments */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
   .site-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  .nav-links {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 900px) {
+  .site-title {
+    font-size: 1rem;
   }
 
   .nav-links {
@@ -55,47 +58,33 @@
   }
 }
 
-/* Mobile phones (450px and below) */
-@media (max-width: 450px) {
-  /* Body adjustments for taller mobile navbar */
+@media (max-width: 425px) {
   body {
-    padding-top: 90px; /* Increased for mobile navbar height */
+    padding-top: 90px;
   }
 
-  /* Mobile navbar structure */
   .navbar {
-    display: flex;
-    height: auto;
-    padding: var(--spacing-sm);
-    flex-direction: row;
+    padding: 8px;
     align-items: stretch;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     margin-bottom: var(--spacing-sm);
   }
 
-  .site-title {
-    display: block;
-    font-size: 0.5rem;
-    font-weight: 700;
-    color: var(--dark-blue-1);
-    margin: 0;
-    text-align: center;
-    width: 100%;
+  .navbar-right,
+  .navbar-left {
+    gap: var(--spacing-sm);
   }
 
-  /* Smaller logo on mobile */
+  .site-title {
+    font-size: 0.65rem;
+  }
   .logo {
     width: 32px;
   }
 
-  /* Adjust nav-links position for taller mobile navbar */
   .nav-links {
-    top: 90px; /* Match the new body padding-top */
+    top: 90px;
   }
 
-  /* Mobile form adjustments */
   .form-section {
     padding: var(--spacing-md) var(--spacing-sm);
     max-width: 100%;
@@ -113,7 +102,6 @@
     padding: var(--spacing-sm);
   }
 
-  /* Mobile footer adjustments */
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -126,7 +114,6 @@
   }
 }
 
-/* Very small screens (320px and below) */
 @media (max-width: 320px) {
   .form-container {
     padding: var(--spacing-sm);
