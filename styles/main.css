@@ -80,15 +80,6 @@ body {
   height: 64px;
 }
 
-/* FIXED: Handle the navbar-row wrapper */
-.navbar-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
 .navbar-left {
   display: flex;
   align-items: center;
