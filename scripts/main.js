@@ -67,4 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+        // Render hero section title from data.js
+        const heroTitleElement = document.querySelector('.hero-title');
+        if (heroTitleElement && typeof heroTitle !== 'undefined') {
+            heroTitleElement.textContent = heroTitle;
+        }
 });
