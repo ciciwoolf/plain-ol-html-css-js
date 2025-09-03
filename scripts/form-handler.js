@@ -60,27 +60,52 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+    const requiredFields = [
+      {
+        id: 'firstName',
+        errorId: 'firstName-error',
+        message: 'Please enter your first name.',
+      },
+      {
+        id: 'lastName',
+        errorId: 'lastName-error',
+        message: 'Please enter your last name.',
+      },
+      {
+        id: 'email',
+        errorId: 'email-error',
+        message: 'Please enter a valid email address.',
+      },
+    ];
+
+    requiredFields.forEach((field) => {
+      const input = document.getElementById(field.id);
+      const error = document.getElementById(field.errorId);
+      if (input && error) {
+        input.addEventListener('blur', function () {
+          if (!input.checkValidity()) {
+            input.classList.add('error');
+            error.textContent = field.message;
+          } else {
+            input.classList.remove('error');
+            error.textContent = '';
+          }
+        });
+      }
+    });
+
     // Clear form button handler
     const clearButton = document.getElementById('clear-form');
     if (clearButton) {
       clearButton.addEventListener('click', function () {
         form.reset();
+        requiredFields.forEach((field) => {
+          const input = document.getElementById(field.id);
+          const error = document.getElementById(field.errorId);
+          if (input) input.classList.remove('error');
+          if (error) error.textContent = '';
+        });
         showMessage('Form cleared.', 'success');
-      });
-    }
-
-    // Email input blur validation
-    const emailInput = document.getElementById('email');
-    const emailError = document.getElementById('email-error');
-    if (emailInput && emailError) {
-      emailInput.addEventListener('blur', function () {
-        if (!emailInput.checkValidity()) {
-          emailInput.classList.add('error');
-          emailError.textContent = 'Please enter a valid email address.';
-        } else {
-          emailInput.classList.remove('error');
-          emailError.textContent = '';
-        }
       });
     }
   } else {
