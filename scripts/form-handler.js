@@ -68,6 +68,21 @@ document.addEventListener('DOMContentLoaded', function () {
         showMessage('Form cleared.', 'success');
       });
     }
+
+    // Email input blur validation
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    if (emailInput && emailError) {
+      emailInput.addEventListener('blur', function () {
+        if (!emailInput.checkValidity()) {
+          emailInput.classList.add('error');
+          emailError.textContent = 'Please enter a valid email address.';
+        } else {
+          emailInput.classList.remove('error');
+          emailError.textContent = '';
+        }
+      });
+    }
   } else {
     console.log('Form not found');
   }

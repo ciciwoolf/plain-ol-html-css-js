@@ -33,13 +33,6 @@
   --transition: all 0.2s ease-in-out;
 }
 
-.form-input:invalid,
-.form-textarea:invalid,
-.form-select:invalid {
-  border-color: var(--error-red);
-  outline: none;
-}
-
 .error-container {
   color: var(--error-red);
   font-size: 0.875rem;
@@ -268,6 +261,18 @@ body {
   font-size: 1rem;
   box-sizing: border-box;
   margin-top: 0.25rem;
+  padding: 0 .75rem;
+}
+
+.form-input.error {
+  border-color: var(--error-red);
+  outline: none;
+}
+
+.form-textarea {
+  height: 3rem;
+  padding: 0 .75rem;
+  resize: vertical;
 }
 
 .form-select {
